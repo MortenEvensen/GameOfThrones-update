@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game of Thrones Board Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:700&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+</head>
+<body class="body" onload="draw()">
+    <!-- Modal for traps -->
+    <div id="trap1modal-wrap" class="trapmodal">
+        <div id="trap1">
+        </div>
+    </div>
+    <!-- Audio for moving game pieces -->
+    <audio id="myAudio">
+        <source src="sounds/move.mp3" type="audio/ogg">
+        <source src="move.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+    </audio>
+    <header>
+        <div class="header">
+            <h1>Game of Thrones * board game</h1>
+        </div>
+    </header>
+     <!-- Audio for moving game pieces -->
+    <div class="game-wrap">
+        <div class="canvas-wrap">
+            <div class="game">
+                <canvas class="canvas" id="myCanvas" width="1200" height="900">
+                </canvas>
+                <div class="text-wrap">
+                    <p id="turn" class='playerMessage'>Player One goes first!</p>
+                     <!-- Display dice, 1 as default -->
+                    <div id="diceAnimation"></div>
+                    <div id="dice">                        
+                        <img src="graphics/dice/dice1.png">
+                    </div>
+                     <!-- Throw dice button -->
+                    <button type="button" id="diceButton" onclick="dice()">Throw Dice</button>
+                    <!-- Display message when player throw a six -->
+                    <div id="six">
+                    </div>
+                </div>
+            </div>
+            <!-- Sword graphic for canvas -->
+            <div style="display:none;">
+                <img id="swordSource" src="graphics/weapons/Swords.png" width="100" height="100">
+            </div>
+             <!-- Shield graphic for canvas -->
+            <div style="display:none;">
+                <img id="shieldSource" src="graphics/weapons/Shield.png" width="100" height="100">
+            </div>
+<!-- Trap graphic for canvas -->
+             <!-- Stark trap -->
+            <div style="display:none;">
+                <img id="starkSource" src="graphics/banners/Stark-banner.png" width="100" height="100">
+            </div>
+            <!-- Lannister trap -->
+            <div style="display:none;">
+                <img id="lannisterSource" src="graphics/banners/Lannister.png" width="100" height="100">
+            </div>
+            <!-- Vale trap -->
+            <div style="display:none;">
+                <img id="valeSource" src="graphics/banners/Vale.png" width="100" height="100">
+            </div>
+            <!-- Baratheon trap -->
+            <div style="display:none;">
+                <img id="baratheonSource" src="graphics/banners/Baratheon.png" width="100" height="100">
+            </div>
+            <!-- Targaryen trap -->
+            <div style="display:none;">
+                <img id="targaryanSource" src="graphics/banners/Targaryan.png" width="100" height="100">
+            </div>
+        </div>
+    <!-- Character graphic for canvas -->
+        <div>
+            <div style="display:none;">
+                <img id="johnSnow" src="graphics/characters/JohnSnow.png" width="100" height="100">
+                <img id="cersei" src="graphics/characters/Cersei_Lannister.png" width="100" height="100">
+                <img id="daenerys" src="graphics/characters/Danny_Targaryan.png" width="100" height="100">
+                <img id="drogo" src="graphics/characters/Drogo.png" width="100" height="100">
+                <img id="geofrey" src="graphics/characters/Geofrey_Lannister.png" width="100" height="100">
+                <img id="jamie" src="graphics/characters/Jamie_Lannister.png" width="100" height="100">
+                <img id="baelish" src="graphics/characters/Petyr_Balish.png" width="100" height="100">
+                <img id="robert" src="graphics/characters/Robert_Baratheon.png" width="100" height="100">
+                <img id="sansa" src="graphics/characters/Sansa_Stark.png" width="100" height="100">
+                <img id="tyrion" src="graphics/characters/Tyrion.png" width="100" height="100">
+            </div>
+        </div>
+    </div>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/game2.js"></script>
+</body>
+</html>

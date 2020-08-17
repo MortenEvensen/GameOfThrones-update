@@ -1,0 +1,665 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+	background-color: black;
+	font-family: 'Cinzel', sans-serif;
+	color: white;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Index page
+---------------*/
+
+/* Header font
+---------------*/
+
+@font-face {
+    font-family: "gameOfThrones";
+    src: url("fonts/GameofThrones.ttf")      format("truetype"),
+        url("fonts/GameofThrones.woff") 
+        format("woff") 
+}
+
+.header {
+	background-color: dimgrey;
+	font-size: 50px;
+	text-align: center;
+	padding: 20px;
+}
+
+h1 {
+	font-family: "gameOfThrones","EB Garamond", sans-serif;
+	font-weight: 900;
+	color: black;
+}
+
+#rules {
+	display: flex;
+	text-align: center;
+	font-size: 40px;
+}
+
+.rules1,
+.rules2,
+.rules3 {
+	flex: 1;
+	padding: 20px;
+}
+
+.rules1 {
+	text-align: left;
+}
+
+.rules2 {
+	text-align: center;
+}
+
+.rules3 {
+	text-align: right;
+}
+
+#whichPlayer {
+	text-align: center;
+}
+
+.name {
+	margin-bottom: 200px;
+}
+
+
+/* Characters
+---------------*/
+
+#content-wrap {
+	padding: 0 0 80px 0;
+}
+
+.character-wrap {
+	border: 2px solid black;
+	width: 150px;
+	height: 150px;
+	padding: 10px;
+	margin: 10px;
+	box-shadow: 5px 5px black;
+	transition: 0.2s;
+	opacity: 1;
+}
+
+.image-wrap {
+	height: 300px;
+	text-align: center;
+}
+
+.modal-content {
+	background: rgba(0, 0, 0, 0.2);
+	margin: auto;
+	padding: 20px;
+}
+
+.modalcharacter1 {
+	width: 250px;
+	padding: 20px;
+	max-height: 800px;
+	margin: auto;
+	border: 5px solid dimgrey;
+	padding: 10px;
+	overflow: scroll;
+	background-color: white;
+	border-radius: 10px;
+	color: black;
+}
+
+h3 {
+	font-weight: 900;
+	font-size: 15px;
+	padding: 10px 0 10px 0;
+	font-weight: 900;
+}
+
+p,
+li {
+	font-size: 16px;
+	padding: 5px 0 0 10px;
+}
+
+.character-wrap2 {
+	display: flex;
+	flex-direction: row;
+}
+
+.character-wrap:hover {
+	opacity: 0.7;
+	cursor: pointer;
+	box-shadow: 2px 2px black;
+}
+
+.character1 {
+	flex: 1;
+	border: 5px solid dimgrey;
+	margin: 10px 10px 10px 10px;
+	padding: 10px;
+	max-height: 430px;
+	overflow: hidden;
+	box-shadow: 5px 5px black;
+	background-color: white;
+	border-radius: 10px;
+	color: black;
+	max-width: 250px;
+    min-width: 180px;
+}
+
+.character1:hover {
+	cursor: pointer;
+	box-shadow: 2px 2px black;
+	opacity: 0.7;
+}
+
+.image,
+.modalimage {
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+#modalimage8 {
+	text-align: center;
+}
+
+.modalimage {
+	min-height: 150px;
+}
+
+.image {
+	max-height: 280px;
+	min-height: 140px;
+}
+
+.player1,
+.player2 {
+	flex: 1;
+}
+
+#image8 {
+	text-align: center;
+    min-height: 160px;
+}
+
+
+/*
+   Modals
+------------------*/
+
+.modal {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	padding-top: 20px;
+	/* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: auto;
+	/* Enable scroll if needed */
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.8);
+	/* Black w/ opacity
+*/
+}
+
+.trapmodal {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	padding-top: 20px;
+	/* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: auto;
+	/* Enable scroll if needed */
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.8);
+	/* Black w/ opacity
+    
+*/
+	text-align: center;
+	padding-top: 100px;
+}
+
+.trapmodal p {
+	font-size: 25px;
+	margin: 100px 400px 100px 400px;
+	line-height: 40px;
+}
+
+button {
+	padding: 10px;
+	border-radius: 30%;
+	margin: 10px;
+	width: 60px;
+	transition: 0.3s;
+}
+
+.modalButton {
+	font-size: 20px;
+	min-width: 150px;
+	min-height: 100px;
+	max-width: 300%;
+}
+
+button:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+button:active {
+	cursor: pointer;
+	opacity: 0.2;
+}
+
+
+.game-wrap {
+    max-width: 100%;
+}
+
+/*
+   Player 1 and 2
+------------------*/
+
+#card1,
+#card2 {
+	background-color: white;
+	color: black;
+	border: 5px solid grey;
+	min-height: 100px;
+	padding: 25px;
+	text-align: center;
+	border-radius: 20px;
+	width: 500px;
+	margin: 20px auto;
+}
+
+.imagePlayer {
+	width: 150px;
+	padding: 20px;
+}
+
+.divplay {
+	margin: 0 30%;
+	text-align: center;
+}
+
+.play {
+	padding: 40px 20px;
+	text-align: center;
+	color: black;
+	background-color: white;
+	font-size: 50px;
+	border: 5px solid grey;
+	border-radius: 50px;
+}
+
+.divplay:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+.divplay:active {
+	opacity: 0.3;
+}
+
+.vs {
+	line-height: 2em;
+	text-align: center;
+	margin: 50px 0;
+	font-size: 30px;
+	background-color: #0b6623;
+	padding: 50px;
+}
+
+
+/* Game page
+-----------*/
+
+.canvas {
+	padding: 0;
+	margin: 100px 100px 0 10px;
+	display: block;
+    width: 70%;
+	max-width: 1100px;
+    min-width: 200px;
+    max-height: 850px;
+    min-height: 150px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border: 1px solid black;
+	background-color: white;
+}
+
+.canvas-wrap {
+    
+}
+
+.text-wrap {
+	float: right;
+	border: 2px solid white;
+	width: 300px;
+	padding: 20px;
+    margin: 30px 2% 0 0;
+    width: 20%;
+}
+
+.footer {
+	margin-top: 500px;
+	margin-bottom: 0;
+}
+
+.playerMessage {
+	font-size: 25px;
+	margin: 0 0 10px 0;
+}
+
+.six {
+	font-size: 20px;
+}
+
+
+/* Victory page
+------------*/
+
+.winner-wrap {
+	margin: 100px 0 0 0;
+	text-align: center;
+	display: flex;
+}
+
+#sword,
+#middle,
+#shield {
+	flex: 1;
+}
+
+#sword,
+#shield {
+	margin: 100px 5px 0 5px;
+}
+
+.winner {
+	font-size: 30px;
+}
+
+.winner-image-wrap {
+	padding: 50px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.winner-image-wrap img {
+	max-height: 500px;
+	min-height: 250px;
+}
+
+#trap1modal-wrap {
+	display: none;
+}
+
+
+/* Smaller screens
+------------*/
+
+@media only screen and (max-width: 1000px) and (min-width: 601px) {
+	.character-wrap2 {
+		margin: 0 auto;
+        max-width: 80%;
+	}
+	.character1 {
+		max-width: 120px;
+		max-height: 210px;
+		margin: 10px 0 100px 10px;
+		padding: 5px;
+        min-width: 80px;
+        
+	}
+	.modalimage,
+	#modalimage8 {
+		height: 150px;
+		min-width: 50px;
+		max-width: 200px;
+	}
+	.name {
+		margin-bottom: 0px;
+	}
+	.image {
+		width: 100px;
+		height: 100px;
+		max-height: 150px;
+		min-height: 100px;
+	}
+	#card1 {
+		max-width: 300px;
+	}
+	.image-wrap {
+		height: 100px
+	}
+	h1 {
+		font-size: 20px;
+		letter-spacing: 2px
+	}
+	h3 {
+		font-size: 12px;
+	}
+	p,
+	li,
+	ul {
+		font-size: 10px;
+	}
+	#image8 {
+		text-align: center;
+		height: 120px;
+	}
+	.imagePlayer {
+		width: 50px;
+	}
+	.play {
+		font-size: 25px;
+	}
+	.footer {
+		margin-top: 500px;
+		margin-bottom: 0;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	#content-wrap {}
+	.character-wrap2 {
+		height: 200px;
+		margin: 50px auto;
+	}
+	.character1 {
+		max-width: 100px;
+		max-height: 210px;
+        min-height: 180px;
+		margin: 10px 0 100px 10px;
+		padding: 5px;
+        min-width: 70px;
+	}
+    
+    
+	.name {
+		margin-bottom: 100px;
+	}
+	.image {
+		width: 100%;
+	}
+	#card1 {
+		max-width: 300px;
+	}
+	.image-wrap {
+		height: 60px
+	}
+	.image,
+	.modalimage {
+		max-height: 150px;
+		max-width: 80px;
+		min-height: 50px;
+	}
+	h1 {
+		font-size: 15px;
+		letter-spacing: 2px
+	}
+	h3 {
+		font-size: 10px;
+        margin-top: 20px; 
+	}
+	p {
+		font-size: 10px;
+	}
+	#image8 {
+		text-align: center;
+		height: 120px;
+	}
+	.imagePlayer {
+		width: 50px;
+	}
+	.play {
+		font-size: 20px;
+	}
+	.footer {
+		margin-top: 500px;
+		margin-bottom: 0;
+	}
+}
