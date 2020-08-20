@@ -481,6 +481,7 @@ button:active {
 	padding: 20px;
     margin: 30px 2% 0 0;
     width: 20%;
+    background-color: none;
 }
 
 .footer {

@@ -53,12 +53,17 @@ function draw() {
 
 /* The canvas board
 --------------------*/
+
+var boardColor1 = "#ff1919";     
+var boardColor2 = "#FCFEF0";
+var trapColor = "#228B22";
+var goalColor = "#a69150";
     
 /* Bottom line
 ---------------*/
     ctx.beginPath();
     ctx.rect(1050, 750, 150, 150);
-    ctx.fillStyle = "grey"
+    ctx.fillStyle = boardColor1;
     ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
@@ -67,6 +72,8 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(900, 750, 150, 150);
+    ctx.fillStyle = boardColor2;
+    ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("2", 1055 - 150, 775);
@@ -74,7 +81,7 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(750, 750, 150, 150);
-    ctx.fillStyle = "grey"
+    ctx.fillStyle = boardColor1;
     ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
@@ -83,6 +90,8 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(600, 750, 150, 150);
+    ctx.fillStyle = boardColor2;
+    ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("4", 1055 - 150 - 150 - 150, 775);
@@ -90,7 +99,7 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(450, 750, 150, 150);
-    ctx.fillStyle = "grey"
+    ctx.fillStyle = boardColor1;
     ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
@@ -99,6 +108,8 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(300, 750, 150, 150);
+    ctx.fillStyle = boardColor2;
+    ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("6", 1055 - 150 - 150 - 150 - 150 - 150, 775);
@@ -106,7 +117,7 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(150, 750, 150, 150);
-    ctx.fillStyle = "grey"
+    ctx.fillStyle = "#8d8d8d";
     ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
@@ -115,6 +126,8 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(0, 750, 150, 150);
+    ctx.fillStyle = boardColor2;
+    ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("8", 1055 - 150 - 150 - 150 - 150 - 150 - 150 - 150, 775);
@@ -124,6 +137,8 @@ function draw() {
 -------------*/
     ctx.beginPath();
     ctx.rect(1050, 600, 150, 150);
+    ctx.fillStyle = boardColor2;
+    ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("9", 1055, 775 - 150);
@@ -131,7 +146,7 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(900, 600, 150, 150);
-    ctx.fillStyle = "grey"
+    ctx.fillStyle = boardColor1;
     ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
@@ -140,6 +155,8 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(750, 600, 150, 150);
+    ctx.fillStyle = boardColor2;
+    ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("11", 1055 - 150 - 150, 775 - 150);
@@ -147,7 +164,7 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(600, 600, 150, 150);
-    ctx.fillStyle = "grey"
+    ctx.fillStyle = boardColor1;
     ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
@@ -156,6 +173,8 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(450, 600, 150, 150);
+    ctx.fillStyle = "#eab64d";
+    ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("13", 1055 - 150 - 150 - 150 - 150, 775 - 150);
@@ -163,7 +182,7 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(300, 600, 150, 150);
-    ctx.fillStyle = "grey"
+    ctx.fillStyle = boardColor1;
     ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
@@ -172,6 +191,8 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(150, 600, 150, 150);
+    ctx.fillStyle = boardColor2;
+    ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("15", 1055 - 150 - 150 - 150 - 150 - 150 - 150, 775 - 150);
@@ -179,7 +200,7 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(0, 600, 150, 150);
-    ctx.fillStyle = "grey"
+    ctx.fillStyle = boardColor1;
     ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
@@ -190,7 +211,7 @@ function draw() {
 -------------*/
     ctx.beginPath();
     ctx.rect(1050, 750 - 300, 150, 150);
-    ctx.fillStyle = "grey"
+    ctx.fillStyle = boardColor1;
     ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
@@ -200,6 +221,8 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(900, 750 - 300, 150, 150);
+    ctx.fillStyle = boardColor2;
+    ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("18", 1055 - 150, 775 - 300);
@@ -207,7 +230,7 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(750, 750 - 300, 150, 150);
-    ctx.fillStyle = "grey"
+    ctx.fillStyle = boardColor1;
     ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
@@ -216,6 +239,8 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(600, 750 - 300, 150, 150);
+    ctx.fillStyle = "#add8e6";
+    ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("20", 1055 - 150 - 150 - 150, 775 - 300);
@@ -223,7 +248,7 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(450, 750 - 300, 150, 150);
-    ctx.fillStyle = "grey"
+    ctx.fillStyle = boardColor1;
     ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
@@ -232,6 +257,8 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(300, 750 - 300, 150, 150);
+    ctx.fillStyle = boardColor2;
+    ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("22", 1055 - 150 - 150 - 150 - 150 - 150, 775 - 300);
@@ -239,7 +266,7 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(150, 750 - 300, 150, 150);
-    ctx.fillStyle = "grey"
+    ctx.fillStyle = boardColor1;
     ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
@@ -248,6 +275,8 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(0, 750 - 300, 150, 150);
+    ctx.fillStyle = boardColor2;
+    ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("24", 1055 - 150 - 150 - 150 - 150 - 150 - 150 - 150, 775 - 300);
@@ -257,6 +286,8 @@ function draw() {
 -------------*/
     ctx.beginPath();
     ctx.rect(1050, 600 - 300, 150, 150);
+    ctx.fillStyle = boardColor2;
+    ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("25", 1055, 775 - 450);
@@ -264,7 +295,7 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(900, 600 - 300, 150, 150);
-    ctx.fillStyle = "grey"
+    ctx.fillStyle = "#A0522D";
     ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
@@ -273,6 +304,8 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(750, 600 - 300, 150, 150);
+    ctx.fillStyle = boardColor2;
+    ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("27", 1055 - 150 - 150, 775 - 450);
@@ -280,7 +313,7 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(600, 600 - 300, 150, 150);
-    ctx.fillStyle = "grey"
+    ctx.fillStyle = boardColor1;
     ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
@@ -289,6 +322,8 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(450, 600 - 300, 150, 150);
+    ctx.fillStyle = boardColor2;
+    ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("29", 1055 - 150 - 150 - 150 - 150, 775 - 450);
@@ -296,7 +331,7 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(300, 600 - 300, 150, 150);
-    ctx.fillStyle = "grey"
+    ctx.fillStyle = boardColor1;
     ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
@@ -305,6 +340,8 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(150, 600 - 300, 150, 150);
+    ctx.fillStyle = boardColor2;
+    ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("31", 1055 - 150 - 150 - 150 - 150 - 150 - 150, 775 - 450);
@@ -312,7 +349,7 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(0, 600 - 300, 150, 150);
-    ctx.fillStyle = "grey"
+    ctx.fillStyle = boardColor1;
     ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
@@ -323,7 +360,7 @@ function draw() {
 -------------*/
     ctx.beginPath();
     ctx.rect(1050, 750 - 600, 150, 150);
-    ctx.fillStyle = "grey"
+    ctx.fillStyle = boardColor1;
     ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
@@ -333,6 +370,8 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(900, 750 - 600, 150, 150);
+    ctx.fillStyle = boardColor2;
+    ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("34", 1055 - 150, 775 - 600);
@@ -340,7 +379,7 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(750, 750 - 600, 150, 150);
-    ctx.fillStyle = "grey"
+    ctx.fillStyle = "#a70e0e";
     ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
@@ -349,6 +388,8 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(600, 750 - 600, 150, 150);
+    ctx.fillStyle = boardColor2;
+    ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("36", 1055 - 150 - 150 - 150, 775 - 600);
@@ -356,7 +397,7 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(450, 750 - 600, 150, 150);
-    ctx.fillStyle = "grey"
+    ctx.fillStyle = boardColor1;
     ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
@@ -365,6 +406,8 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(300, 750 - 600, 150, 150);
+    ctx.fillStyle = boardColor2;
+    ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("38", 1055 - 150 - 150 - 150 - 150 - 150, 775 - 600);
@@ -372,7 +415,7 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(150, 750 - 600, 150, 150);
-    ctx.fillStyle = "grey"
+    ctx.fillStyle = boardColor1;
     ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
@@ -381,6 +424,8 @@ function draw() {
 
     ctx.beginPath();
     ctx.rect(0, 750 - 600, 150, 150);
+    ctx.fillStyle = boardColor2;
+    ctx.fill();
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("40", 1055 - 150 - 150 - 150 - 150 - 150 - 150 - 150, 775 - 600);
@@ -403,7 +448,7 @@ function draw() {
 --------------*/
     ctx.beginPath();
     ctx.rect(0, 0, 1200, 150);
-    ctx.fillStyle = "#0b6623";
+    ctx.fillStyle = goalColor;
     ctx.fill();
 /* Sword and shield graphics
 ----------------------------*/
@@ -415,7 +460,7 @@ function draw() {
 ----------------------------*/
     ctx.beginPath();
     ctx.font = "100px Verdana";
-    ctx.fillStyle = "#aaaaaa";
+    ctx.fillStyle = "black";
     ctx.fillText("Goal", 475, 110);
     ctx.fill();
 
@@ -457,13 +502,13 @@ function draw() {
 -----------------------------------------------*/
 
     ctx.beginPath();
-    ctx.fillStyle = "#aaaaaa";
+    ctx.fillStyle = "#eab4f4";
     ctx.strokeStyle = "#000000";
-    ctx.font = "10px Arial";
+    ctx.font = "12px Arial";
     ctx.arc(circleX2, circleY2, 65, 0, 2 * Math.PI);
     ctx.fill();
     ctx.beginPath();
-    ctx.strokeText(secondPlayer2, circleX2 - 35, circleY2 + 45);
+    ctx.strokeText(secondPlayer2, circleX2 - 45, circleY2 + 40);
     ctx.stroke();
 
  /* Checking which player is chosen, adding the right graphics
@@ -494,15 +539,16 @@ function draw() {
 -----------------------------------------------*/
 
     ctx.beginPath();
-    ctx.fillStyle = "#cccccc";
+    ctx.fillStyle = "#90ee90";
     ctx.strokeStyle = " #000000";
-    ctx.font = "10px Arial";
+    ctx.font = "12px Arial";
     ctx.arc(circleX1, circleY1, 65, 0, 2 * Math.PI);
     ctx.stroke();
     ctx.fill();
     ctx.beginPath();
-    ctx.strokeText(firstPlayer1, circleX1 - 35, circleY1 + 45);
+    ctx.strokeText(firstPlayer1, circleX1 - 45, circleY1 + 40);
     ctx.stroke();
+    
     
  /* Checking which player is chosen, adding the right graphics
 -----------------------------------------------*/   
@@ -576,8 +622,10 @@ function draw() {
     };
     if (player1game.length > player2game.length && (trapo.length == dicolini)) {
         document.getElementById("turn").innerHTML = "<p class='playerMessage'>Player two/" + secondPlayer2 + ", it's your turn!</p>"
+        document.getElementById("text-wrap-id").style.backgroundColor = "#eab4f4"
     } else if (player1game.length == player2game.length && (trapo.length == dicolini)) {
         document.getElementById("turn").innerHTML = "<p class='playerMessage'>Player one/" + firstPlayer1 + ", it's your turn!</p>"
+        document.getElementById("text-wrap-id").style.backgroundColor = "#90ee90"
     };
 };
 
@@ -593,6 +641,7 @@ function dice() {
     /* Player 1
     -----------------*/
     if (player1game.length === player2game.length) {
+        
          /* Push a value to player1game
          -------------------------*/
         player1game.push(1);
@@ -659,7 +708,6 @@ function dice() {
     /* Player 2
     -----------------*/
     else if (player1game.length > player2game.length) {
-
         player2game.push(1);
          /* Clear trapo (move count)
          -------------------------*/
@@ -722,12 +770,13 @@ function dice() {
             if (player1game.length > player2game.length) {
                 document.getElementById("turn").innerHTML = "<p class='playerMessage'>Player one/" + firstPlayer1 + ", it's still your turn!</p>";
                 document.getElementById("six").innerHTML = "<p class='six'>Player One got a six, therefore you get to throw the dice one more time!</p>";
+                document.getElementById("text-wrap-id").style.backgroundColor = "#90ee90"
                 player1game.shift();
             } else if (player1game.length === player2game.length) {
                 console.log("six else")
                 document.getElementById("turn").innerHTML = "<p class='playerMessage'>Player two/" + secondPlayer2 + ", it's still your turn!</p>";
                 document.getElementById("six").innerHTML = "<p class='six'>Player Two got a six, therefore you get to throw the dice one more time!</p>";
-
+                document.getElementById("text-wrap-id").style.backgroundColor = "#eab4f4"
                 player2game.shift();
             }
         }
@@ -1047,7 +1096,7 @@ document.addEventListener("keyup", function(event) {
 /* Throw dice with "Enter"/"Return" key (not if modal is open or a player is moving)
 -------------------------------------------*/
     else if ((event.keyCode === 13) && (document.getElementById("diceButton").disabled === false) && (document.getElementById("trap1modal-wrap").style.display = "none")) {
-            console.log("Hei")
+            
         dice();
         }
 })
